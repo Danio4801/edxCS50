@@ -23,6 +23,10 @@ $rmdir pset1/			// remove directory, if u want to use directory u can\'92t be in
 \
 CLANG\
 clang hello.c // compile code via clang, output: file called  a.out (then \'93./a.out\'94 to compile; a.out because it is historical name:\'94assembler output\'94 \
-clang -o hello hello.c // compile code and change output name ( it will no longer be a.out) \
+clang -o hello hello.c // compile code hello.c and change output name to hello ( it will no longer be a.out) \
+clang -o hello hello.c  -lcs50 // -l means we are adding custom libraries, in this case cs50 \
 \pard\tqr\tx653\tx659\pardeftab560\slleading20\partightenfactor0
-\cf0 We can also get quick access to the last used s In terminal by using up - arrow once or more timess}
+\cf0 We can also get quick access to the last used s In terminal by using up - arrow once or more times\
+\
+DEBUGGER\
+Add breakpoint and then in the terminal:  debug50 ./filename}

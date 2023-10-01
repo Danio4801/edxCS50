@@ -1,16 +1,46 @@
 #include <cs50.h>
 #include <ctype.h>
 #include <stdio.h>
+#include <string.h>
 
-string get_word(string word);
+string replace(string word);
 
 int main(int argc, string argv[])
 {
-    string word = get_word();
+    if (argc < 2 || argc > 2)
+    {
+        printf("Error. Invalid number of arguments.\n");
+        return 1;
+    }
+    else
+    {
+        string word = argv[1];
+        word = replace(word);
+        printf("%s\n", word);
+        return 0;
+    }
 }
 
-string get_word(void)
+string replace(string word)
 {
-    string word = get_string("Enter the word you want to convert: ");
+    for (int i = 0, n = strlen(word); i < n; i++)
+    {
+        switch (word[i])
+        {
+            case 'a':
+                word[i] = '6';
+                break;
+            case 'e':
+                word[i] = '3';
+                break;
+            case 'i':
+                word[i] = '1';
+                break;
+            case 'o':
+                word[i] = '0';
+                break;
+            default:;
+        }
+    }
     return word;
 }

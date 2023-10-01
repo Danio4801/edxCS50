@@ -15,7 +15,7 @@ int main(int argc, string argv[])
     else
     {
         printf("Your password needs at least one uppercase letter, lowercase letter, number and symbol\n");
-    }
+    } 
     return 0;
 }
 

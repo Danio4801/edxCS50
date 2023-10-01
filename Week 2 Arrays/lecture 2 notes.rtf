@@ -1,8 +1,9 @@
 {\rtf1\ansi\ansicpg1252\cocoartf2709
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;\f1\fnil\fcharset0 AppleColorEmoji;}
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;\f1\fnil\fcharset0 AppleColorEmoji;\f2\fswiss\fcharset0 Helvetica;
+}
 {\colortbl;\red255\green255\blue255;}
 {\*\expandedcolortbl;;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww28600\viewh14580\viewkind0
+\paperw11900\paperh16840\margl1440\margr1440\vieww28600\viewh18000\viewkind0
 \deftab560
 \pard\pardeftab560\slleading20\partightenfactor0
 
@@ -48,9 +49,32 @@ int scores[3];// this is how to declare the array of ints called scores. The arr
 score[0] = 72; // here\'92s how to store some data in the array (index 0)(index0 is the first number, we start at 0)  \
 \
 \
-echo $? In terminal tell us what int main() returned \
-0 by default means success \
+\
 \
 Plaintext -> |algrithm| -> output (encrypted) text \
 Key - the secret number that only we and the other person know, combined with the algorithm let us read the message (encrypt /decrypt  the message).\
+\
+	Command line arguments \
+int main( int argc, string argv[]) - main will take arguments \
+argc - argument count  (arrays don\'92t keep track of their own length) \
+argv - array of the words \
+How to use this\uc0\u10067  \
+Example 1: \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf0 4 int main(int arg, string argv[])\
+5 \{\
+6 	printf("hello, %s\\n\'94, argv [1]);\
+7 \}\
+TERMINAL\
+$ make greet \
+$ ./greet David\
+hello, David\
+
+\fs32 So the output is hello David because argv[1] David (and argv[0] is ./greet btw)\
+
+\f0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 echo $? In terminal tell us what int main() returned \
+0 by default means success \
 }

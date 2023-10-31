@@ -1,5 +1,5 @@
 {\rtf1\ansi\ansicpg1252\cocoartf2709
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 AppleColorEmoji;}
 {\colortbl;\red255\green255\blue255;}
 {\*\expandedcolortbl;;}
 \paperw11900\paperh16840\margl1440\margr1440\vieww28600\viewh18000\viewkind0
@@ -25,7 +25,9 @@ do\
 \}\
 while (condition); expression inside \{\} will run at least once, if condition inside while is true it will run again, otherwise only once \
 \
-When we should use particular type of loop\uc0\u10067  \
+When we should use particular type of loop
+\f1 \uc0\u10067 
+\f0  \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 \cf0 \
 while\
@@ -35,4 +37,53 @@ do-while\
 \'95 Use when you want a loop to repeat an unknown number of times, but at least once.\
 \
 for\
-\'95 Use when you want a loop to repeat a discrete number of times, though you may not know the number at the moment the program is compiled.}
+\'95 Use when you want a loop to repeat a discrete number of times, though you may not know the number at the moment the program is compiled.\
+\
+	Magic numbers \
+#define NAME REPLACEMENT (WITHOUT ; AT THE END)\
+ Example:\
+#define PI 3.14159 //code will replace all \'93PI\'94 in the code with the 3.14159 (it\'92s basically find and replace function)\
+\
+#define COURSE \'93CS50\'94\
+ \
+Defending like: PI or COURSE should\'92ve only capital letters in the name for making clear that\'92s the define in the code. \
+	\
+Another good example (code and pseudocode mixed here) \
+\
+#define DECKSIZE 52\
+card deal_cards(deck name)\
+\{\
+	for (int i = 0; i < DECKSIZE; I++) //this way we don\'92t have any magic numbers in this code\
+	\{\
+		//deal the card\
+	\}\
+\}\
+\
+\
+	Data types and variables \
+Int - always takes 4 bytes of memory (32 bits cuz 1 byte = 8 bits; 4 byte = 4 * 8 bits; \
+We split this value by 2 for negative and positive integers  \
+Range -2^31 (2^31) - 1 [minus 1 for zero]\
+\
+Qualifiers:\
+-Unsigned\
+Unsigned integer - unsigned in every data type doubles the positive range of values and does not allow negative values, so if we know the value will be higher than 2 billions but less than 4 billions we might want to use unsigned  int, (we have to make sure the value will never be negative). \
+\
+Char - only can store one character and takes 1 byte of memory \
+\
+Float - for numbers with decimal point in them, float takes 4 bytes in memory \
+\
+Double - double precision, double takes 8 bytes in memory (2x bigger compared to float) \
+\
+\
+Void - it\'92s not the data type, it is a type \
+If functions returns void it means it doesn\'92t return a value \
+For example printf is a void function because it prints something and does not do anything else.\
+\
+Bool - hold only true or false ; the default value is false\
+\
+Int number; //declaration\
+Number = 17; //assignment \
+\
+Int number = 17;//initialization  - declaring and setting value at the same time \
+}

@@ -1,0 +1,78 @@
+	Operators
+% - mod gives us remainder when we divide two numbers together, for example 13 / 4 gives us remainder     1 because 4 * 3 = 12; 13 - 12 = 1
+Example of usage 
+If we want to generate random number between lets say 0 - 20 we can generate some random number (might be really huge like 2332432)  and divide it by 20 and we that way we can get the remainder, the value can be only between 0 to 19.
+
+Bool value - every value that is not equal to zero means true while 0 means false.  (Every non zero value is true) 
+	
+	Loops 
+1)
+while(true){
+} 
+This is infinity loop that will run forever
+
+2)
+do
+{
+
+}
+while (condition); expression inside {} will run at least once, if condition inside while is true it will run again, otherwise only once 
+
+When we should use particular type of loop❓ 
+
+while
+•Use when you want a loop to repeat an unknown number of times, and possibly not at all.
+
+do-while
+• Use when you want a loop to repeat an unknown number of times, but at least once.
+
+for
+• Use when you want a loop to repeat a discrete number of times, though you may not know the number at the moment the program is compiled.
+
+	Magic numbers 
+#define NAME REPLACEMENT (WITHOUT ; AT THE END)
+ Example:
+#define PI 3.14159 //code will replace all “PI” in the code with the 3.14159 (it’s basically find and replace function)
+
+#define COURSE “CS50”
+ 
+Defending like: PI or COURSE should’ve only capital letters in the name for making clear that’s the define in the code. 
+	
+Another good example (code and pseudocode mixed here) 
+
+#define DECKSIZE 52
+card deal_cards(deck name)
+{
+	for (int i = 0; i < DECKSIZE; I++) //this way we don’t have any magic numbers in this code
+	{
+		//deal the card
+	}
+}
+
+
+	Data types and variables 
+Int - always takes 4 bytes of memory (32 bits cuz 1 byte = 8 bits; 4 byte = 4 * 8 bits; 
+We split this value by 2 for negative and positive integers  
+Range -2^31 (2^31) - 1 [minus 1 for zero]
+
+Qualifiers:
+-Unsigned
+Unsigned integer - unsigned in every data type doubles the positive range of values and does not allow negative values, so if we know the value will be higher than 2 billions but less than 4 billions we might want to use unsigned  int, (we have to make sure the value will never be negative). 
+
+Char - only can store one character and takes 1 byte of memory 
+
+Float - for numbers with decimal point in them, float takes 4 bytes in memory 
+
+Double - double precision, double takes 8 bytes in memory (2x bigger compared to float) 
+
+
+Void - it’s not the data type, it is a type 
+If functions returns void it means it doesn’t return a value 
+For example printf is a void function because it prints something and does not do anything else.
+
+Bool - hold only true or false ; the default value is false
+
+Int number; //declaration
+Number = 17; //assignment 
+
+Int number = 17;//initialization  - declaring and setting value at the same time 
